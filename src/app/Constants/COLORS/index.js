@@ -14,7 +14,7 @@ export const COLORS = {
   lightGreen4: '#b7cb65',
   leafGreen: '#7eaf3c',
   starGreen: '#86a701',
-
+  green: '#51FF25',
   grey: '#464646',
   greyish: '#1e2329',
   lighGrey: '#262932',

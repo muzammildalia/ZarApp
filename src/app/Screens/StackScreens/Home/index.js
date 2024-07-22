@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <View style={{flex: 1}}>
       <StatusBar translucent backgroundColor="transparent" />
-      <View style={{flexDirection: 'row', height: '40%'}}>
+      <View style={{flexDirection: 'row', height: '45%'}}>
         <HomeTopComp />
       </View>
     </View>

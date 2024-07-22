@@ -12,6 +12,7 @@ import {COLORS, windowHeight, windowWidth} from '../../Constants/COLORS';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 import {LineChart} from 'react-native-wagmi-charts';
 
 const HomeTopComp = () => {
@@ -97,14 +98,157 @@ const HomeTopComp = () => {
       <View
         style={{
           flexDirection: 'row',
-          height: '20%',
+          height: windowHeight / 6,
           width: '100%',
         }}>
         <LineChart.Provider data={data}>
           <LineChart height={windowHeight / 6} width={windowWidth} style={{}}>
-            <LineChart.Path />
+            <LineChart.Path animateOnMount="foreground" width={2} />
           </LineChart>
         </LineChart.Provider>
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          height: '20%',
+          width: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <View
+          style={{
+            flexDirection: 'column',
+            paddingHorizontal: '5%',
+            width: '50%',
+            height: '100%',
+          }}>
+          <Text
+            style={[
+              styles.text,
+              {fontSize: windowHeight / 45, textAlign: 'left'},
+            ]}>
+            Portfolio Value
+          </Text>
+          <Text
+            style={[
+              styles.text,
+              {fontSize: windowHeight / 20, textAlign: 'left'},
+            ]}>
+            12.547 g
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: 'column',
+            paddingHorizontal: '5%',
+            // backgroundColor: COLORS.red,
+            width: '40%',
+            height: '100%',
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              width: '100%',
+              height: '50%',
+            }}>
+            <Entypo name="triangle-up" size={24} color={COLORS.green} />
+            <Text style={styles.text}>402(0.12%)</Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              alignItems: 'center',
+              width: '100%',
+              height: '50%',
+              // justifyContent: 'center',
+              alignItems: 'center',
+              // backgroundColor: COLORS.red,
+            }}>
+            <View
+              style={{
+                flexDirection: 'column',
+                backgroundColor: COLORS.black,
+                height: '70%',
+                width: '20%',
+                borderTopLeftRadius: 10,
+                borderBottomLeftRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: COLORS.white, fontSize: windowHeight / 65},
+                  ]}>
+                  D
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                flexDirection: 'column',
+                backgroundColor: COLORS.black,
+                height: '70%',
+                width: '20%',
+                // borderTopLeftRadius: 10,
+                // borderBottomLeftRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: COLORS.white, fontSize: windowHeight / 65},
+                  ]}>
+                  M
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                flexDirection: 'column',
+                // justifyContent: 'center',
+                // alignItems: 'center',
+                backgroundColor: COLORS.black,
+                height: '70%',
+                width: '20%',
+                borderTopRightRadius: 10,
+                borderBottomRightRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: COLORS.white, fontSize: windowHeight / 65},
+                  ]}>
+                  Y
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          {/* <Text
+            style={[
+              styles.text,
+              {fontSize: windowHeight / 20, textAlign: 'left'},
+            ]}>
+            12.547 g
+          </Text> */}
+        </View>
       </View>
     </LinearGradient>
   );
